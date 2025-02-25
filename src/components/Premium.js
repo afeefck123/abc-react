@@ -27,7 +27,6 @@ const Premium = () => {
           and engaging way. Say goodbye to generic websites that fail to capture your 
           company’s essence.
         </p>
-        <p>nice</p>
         <p className={styles.description}>
             Our fundamental user panel ensures that updates and maintenance are effortless, allowing you to focus on growing your business. With our Premium Package, you can leave behind the stress of website management and instead devote your energy to engaging your clients and creating valuable connections.
         </p>
