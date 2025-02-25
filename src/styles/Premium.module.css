@@ -1,0 +1,90 @@
+.eliteSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 6rem;
+    background-color: #060506;
+    color: #fff;
+    gap: 4rem;
+  }
+  
+  .leftPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .eliteImage {
+    width: 200px;
+    height: auto;
+  }
+  
+  .basePrice {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 1rem;
+  }
+  
+  .whatsappLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .whatsappLink span {
+    font-size: 1.2rem;
+  }
+  
+  .orderButton,
+  .portfolioButton {
+    width: 200px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .orderButton {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .orderButton:hover {
+    background-color: #ddd;
+  }
+  
+  .portfolioButton {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .portfolioButton:hover {
+    background-color: #555;
+  }
+  
+  .rightPanel {
+    max-width: 600px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: Afical Stencil;
+
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  

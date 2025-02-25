@@ -1,0 +1,199 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  background-color: #06050607;
+  margin-top: -150px;
+}
+.hero, .logo {
+  background-color: #06050607;
+}
+
+.heroContent {
+  margin-bottom: 2rem;
+  z-index: 2;
+  margin-top: 300px;
+  margin-bottom: -100px;
+  background-color: #06050607;
+  
+}
+
+.title {
+  font-size: 4.5rem;
+  font-family: Afical Stencil !important;
+  color:rgb(222, 194, 194);
+}
+
+.subtitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.startButton {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #e5e6f1;
+  color: rgb(41, 40, 40);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.startButton:hover {
+  background-color: #838392;
+}
+
+/* Logo Container */
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+/* Keyframes for Slight Anti-Clockwise Rotation (No Zoom) */
+@keyframes slightRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Updated Logo Image Styling (Without Zoom) */
+.logoImage {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  object-fit: contain;
+  transform-origin: center;
+  filter: brightness(1.2) contrast(1.5);
+  animation: slightRotate 5s ease-in-out infinite alternate;
+  background-color:transparent;
+  transition: all 1s ease;
+  background-color: #06050607;;
+  
+  
+}
+.movedRight {
+  transform: translateX(500px) translateY(-100px);
+}
+
+
+/* Sidebar Position */
+.sidebar {
+  position: fixed;
+  left: 150px;
+  top: 80%; /* ✅ Centered better */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  
+}
+
+/* Line Bar */
+.lineBar {
+  width: 2px;
+  height: 125px;
+  background-color: rgb(218, 200, 200);
+  position: relative;
+  margin-right: 10px;
+}
+
+/* Moving Pointer */
+.pointer {
+  position: absolute;
+  left: 50%;
+  width: 3.5px; /* ✅ Slightly larger for better visibility */
+  height: 18px; /* ✅ Adjusted for better UX */
+  background-color: #fffff3;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  transition: top 0.4s ease-in-out; /* ✅ Faster transition */
+}
+
+/* Section Names (Displayed Next to Line Bar) */
+/* Sidebar Labels */
+.sidebarLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 125px;
+  align-items: flex-start; /* Ensures labels align to the left */
+  font-size: 2rem;
+  padding-left: 10px; /* Adjust spacing from the left edge */
+  position: absolute;
+  top: 0;
+}
+
+/* Make text vertical */
+.sidebarLabels span {
+  font-size: 5px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+  writing-mode: vertical-rl; /* ✅ Rotates text vertically */
+  transform: rotate(0deg); /* ✅ Ensures text is readable from top to bottom */
+  position: absolute;
+  right: 20px;
+}
+
+/* Show only the active section name */
+.sidebarLabels .activeLabel {
+  opacity: 1;
+  font-size: 12px;
+  color: #ebeae7;
+}
+
+
+/* Sections */
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  text-align: center;
+  background-color: #06050607;
+  color: white;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* ✅ Prevents body from scrolling */
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+.navbar {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.animatedBall {
+  position: fixed; /* Use fixed positioning to keep it in the viewport */
+  top: 20%;
+  left: 20%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  border-radius: 50%;
+  filter: blur(80px);
+  transform: translate(-50%, -50%); /* Center the ball */
+  transition: transform 0.1s linear; /* Smooth movement */
+}

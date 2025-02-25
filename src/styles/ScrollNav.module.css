@@ -1,0 +1,61 @@
+/* Wrapper for the scroll navigation */
+.scroll-wrapper {
+    position: fixed;
+    left: 50px; /* Adjust to match your screenshot */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays above other elements */
+    pointer-events: none; /* Prevents interference with clicks */
+  }
+  
+  /* Thin vertical line */
+  .scroll-line {
+    position: absolute;
+    width: 2px;
+    height: 150px; /* Adjust height based on sections */
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Moving indicator (shows active section) */
+  .scroll-indicator {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: cyan;
+    border-radius: 50%;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  /* List of navigation links */
+  .scroll-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styling for the section buttons */
+  .scroll-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px;
+    writing-mode: vertical-rl; /* Rotates text vertically */
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    pointer-events: all; /* Ensures buttons are clickable */
+  }
+  
+  /* Highlight active section */
+  .scroll-nav button:hover,
+  .scroll-nav .active button {
+    color: cyan;
+  }
+  

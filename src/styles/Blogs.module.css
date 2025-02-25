@@ -1,0 +1,227 @@
+.blogsSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* ✅ Ensure left alignment */
+  text-align: left;
+  background: #0c0c0f00;
+  color: #fff;
+  width: 100vw;
+}
+
+.container {
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 8%;
+  margin-left: 160px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px; /* ✅ Reduce space between title & subtitle */
+  font-family: 'Afical Stencil';
+}
+
+.subtitle {
+  font-size: 1rem; /* ✅ Corrected font-size */
+  color: #aaa;
+  max-width: 600px;
+  margin-left: 0; /* ✅ Align with title */
+  line-height: 1.6;
+}
+
+/* Blog Scrollable Wrapper */
+.blogsWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Blog Cards */
+.blogsGrid {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100%;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.blogsGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.blogCard {
+  flex: 0 0 280px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.blogCard:hover {
+  transform: scale(1.05);
+}
+
+.blogTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Afical Stencil';
+}
+
+.blogDescription {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 10px 0;
+  flex-grow: 1;
+}
+
+.blogDate {
+  font-size: 0.8rem;
+  color: #f5a623;
+  margin-top: auto;
+}
+/* Bottom navigation container */
+.bottomNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+/* Navigation controls (Dots + "See All") */
+.navigationControls {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* ✅ Reduce space between dots & "See All" */
+}
+
+/* Dots container */
+.dots {
+  display: flex;
+  gap: 4px; /* ✅ Reduce spacing between dots */
+  align-items: center;
+  margin-right: 4px; /* ✅ Moves "See All" closer */
+}
+
+/* Individual dot */
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* "See All" Button */
+.seeAll {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  padding: 0;
+  margin: 0; /* ✅ Ensures "See All" is close to dots */
+}
+
+.seeAll:hover {
+  opacity: 0.7;
+}
+
+/* Arrow Controls (Right Side) */
+.arrowControls {
+  display: flex;
+  gap: 10px;
+}
+
+/* Right Arrow Button */
+/* Bottom Arrow Button */
+.bottomArrow {
+  background: transparent;
+  border: 5px solid rgba(255, 255, 255, 0.5); /* ✅ Thin border */
+  border-radius: 50%; /* ✅ Circular shape */
+  width: 40px; /* ✅ Adjust size */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.3s;
+  
+  position: absolute;
+  bottom: -50px; /* ✅ Position below dots & "See All" */
+  right: 20px; /* ✅ Align to right end */
+}
+
+.bottomArrow svg {
+  width: 16px; 
+  height: 16px;
+  stroke: white;
+}
+
+.bottomArrow:hover {
+  background: rgba(255, 255, 255, 0.1); 
+  opacity: 0.8;
+}
+
+.arrowButton svg {
+  width: 12px; /* ✅ Smaller icon */
+  height: 12px;
+  stroke: white;
+  transition: opacity 0.3s;
+}
+
+.arrowButton:hover svg {
+  opacity: 0.7;
+}
+.arrowButton:hover svg {
+  opacity: 0.7;
+}
+.blogDetail {
+  padding-top: 100px; /* Push content down below navbar */
+  width: 100%; /* Full width */
+  max-width: 100%; /* Ensures no content restriction */
+  margin: 0 auto; /* Center align */
+  margin-top: 200px;
+}
+
+.blogContentWrapper {
+  text-align: left;
+  padding: 20px;
+  width: 100%; /* Take full width */
+}
+
+.blogDetailTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+  width: 80%; /* Ensures title is stretched */
+  font-family: 'Afical Stencil';
+  margin-top: -120px;
+}
+
+.blogContent {
+  width: 75%;
+}
+
+.blogContent img {
+  max-width: 25%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}

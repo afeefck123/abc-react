@@ -1,0 +1,194 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* Add this to ensure .hidden takes precedence */
+.navbar.hidden {
+  display: none !important; /* Forcefully hide the navbar */
+}
+
+.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbarContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Afical Stencil;
+}
+
+.logoContainer {
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 130px;
+}
+
+.logoInner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoInner {
+  transform: scale(1.1);
+}
+
+.desktopNav {
+  display: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.liveExpertBtn {
+  display: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: .7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.liveExpertBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mobileMenuBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.mobileNav.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNavLink {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
+}
+
+.mobileNavLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .liveExpertBtn {
+    display: block;
+  }
+
+  .mobileMenuBtn {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px; /* Adjust if needed */
+  z-index: 1001;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  filter: invert(1); /* Makes black SVG white */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+.hiddenNavbar {
+  display: none !important;
+}
+.hiddenNavbar {
+  display: none !important; /* Forces hiding */
+  visibility: hidden !important;
+  opacity: 0 !important;
+}

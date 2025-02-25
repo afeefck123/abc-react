@@ -1,0 +1,96 @@
+.blogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+.blogTitle {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-family:  Afical Stencil;
+  margin-left: -1100px;
+  margin-top: 7%;
+
+}
+
+.blogSubtitle {
+  font-size: 18px;
+  color: #b3b3b3;
+  margin-bottom: 50px;
+  margin-left: -570px;
+}
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Adjusts automatically */
+  gap: 30px;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.blogCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 30px; /* Increased padding */
+  max-width: 600px; /* Wider cards */
+  min-height: 250px; /* Taller cards */
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.blogCard:hover {
+  transform: translateY(-5px);
+}
+
+.blogCard h3 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: Afical Stencil; 
+}
+
+.blogCard p {
+  font-size: 18px;
+  color: #cfcfcf;
+  line-height: 1.4;
+}
+
+.blogCard .date {
+  font-size: 14px;
+  color: #888;
+  margin-top: 15px;
+  display: block;
+}
+
+.readMoreIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 50px; /* Slightly bigger */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.blogDetail h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #f7f2f2e5;
+  margin-bottom: 10px;
+  font-family: Afical Stencil;
+}
+
+.blogContent p {
+  font-size: 20px;
+  color: #f7f2f2e5;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden; /* ✅ Prevents scrolling on body */
+  scroll-behavior: smooth;
+}
+
+.scrollContainer {
+  height: 100vh; /* ✅ Full viewport height */
+  overflow-y: scroll; /* ✅ Enables scrolling inside this div */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Hide scrollbar for Chrome, Safari, Edge */
+.scrollContainer::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+/* ✅ Hide scrollbar for Firefox */
+.scrollContainer {
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari, Edge) */
+}
+
+body {
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
